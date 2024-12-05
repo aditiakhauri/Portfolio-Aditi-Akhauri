@@ -18,7 +18,7 @@ const About = () => {
           {/* Left Section: Profile Image */}
           <Grid item xs={12} md={4} display="flex" justifyContent="center">
             <img
-              src="/path-to-your-image.jpg" // Replace with your profile image path
+              src="/path-to-your-image.jpg" 
               alt="Profile"
               style={{
                 width: "250px",

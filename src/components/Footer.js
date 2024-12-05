@@ -9,10 +9,10 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        background: "linear-gradient(to right, #2b2d9c, #391c68)", // Gradient background
+        background: "linear-gradient(to right, #2b2d9c, #391c68)", 
         color: "white",
-        py: 3, // Padding Y-axis
-        px: 4, // Padding X-axis
+        py: 3, 
+        px: 4, 
       }}
     >
       <Grid container alignItems="center" justifyContent="space-between">
@@ -50,8 +50,6 @@ const Footer = () => {
           </IconButton>
         </Grid>
       </Grid>
-
-      {/* Footer Navigation */}
       
     </Box>
   );

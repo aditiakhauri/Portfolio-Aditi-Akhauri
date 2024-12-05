@@ -138,9 +138,9 @@ const Header = () => {
             justifyContent: "center",
             "&:hover": {
               backgroundColor: "#FFD700",
-              color: "black", // Ensure text color changes to black
+              color: "black", 
               "& .MuiSvgIcon-root": {
-                color: "black", // Ensure icon color changes to black
+                color: "black", 
               },
             },
           }}

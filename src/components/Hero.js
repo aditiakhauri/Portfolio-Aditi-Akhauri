@@ -6,11 +6,11 @@ const Hero = () => {
     <section id="hero">
       <Box
         sx={{
-          background: "linear-gradient(to right, #2b2d9c, #391c68)", // Matching the gradient background
+          background: "linear-gradient(to right, #2b2d9c, #391c68)", 
           color: "white",
-          py: 10, // Padding on Y-axis
-          px: 4, // Padding on X-axis
-          textAlign: "center", // Center-align text
+          py: 10,
+          px: 4, 
+          textAlign: "center", 
         }}
       >
         <Typography
@@ -18,11 +18,11 @@ const Hero = () => {
           sx={{
             fontWeight: "bold",
             fontSize: {
-              xs: "2rem", // Small screen size
-              sm: "3rem", // Medium screen size
-              lg: "4rem", // Large screen size
+              xs: "2rem", 
+              sm: "3rem", 
+              lg: "4rem", 
             },
-            mb: 2, // Margin bottom
+            mb: 2, 
           }}
         >
           "Good Software, Like Wine, Takes Time"
