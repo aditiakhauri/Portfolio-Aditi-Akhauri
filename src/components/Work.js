@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent, List, ListItem } from "@mui/material";
 import { motion } from "framer-motion";
+import profileImage from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg" 
 
 const Work = () => {
   const experiences = [
@@ -41,7 +42,6 @@ const Work = () => {
     },
   ];
 
-
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -52,12 +52,60 @@ const Work = () => {
       id="work"
       style={{
         padding: "50px 20px",
-        background: "linear-gradient(to right, #2b2d9c, #391c68)",
+        backgroundColor: "#1a1a1a",
         color: "white",
+        display: "flex",
       }}
     >
-      <Box sx={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
-        {/* Heading */}
+      {/* Fixed Left Section */}
+      <Box
+        sx={{
+          position: "sticky",
+          top: "20px",
+          width: "30%",
+          maxWidth: "300px",
+          height: "100%",
+          marginRight: "20px",
+          backgroundColor: "white",
+          borderRadius: "20px",
+          padding: "20px",
+        }}
+      >
+        <Box
+          component="img"
+          src={profileImage}
+          alt="Profile"
+          sx={{
+            width: "100%",
+            borderRadius: "20px",
+            marginBottom: "10px",
+          }}
+        />
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            mb: 1,
+            color: "black",
+            textAlign: "center",
+          }}
+        >
+          ADITI AKHAURI
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: "gray",
+            fontSize: "0.9rem",
+            textAlign: "center",
+          }}
+        >
+          A Software Engineer who has developed countless innovative solutions.
+        </Typography>
+      </Box>
+
+      {/* Right Section: Experience */}
+      <Box sx={{ width: "70%" }}>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,13 +117,14 @@ const Work = () => {
             sx={{
               fontWeight: "bold",
               mb: 6,
+              textAlign: "center",
             }}
           >
-            Experience
+            1+ YEARS OF EXPERIENCE
           </Typography>
         </motion.div>
 
-        {/* Experiences */}
+        {/* Experience Cards */}
         <Grid container spacing={4}>
           {experiences.map((experience, index) => (
             <Grid item xs={12} key={index}>
@@ -96,13 +145,35 @@ const Work = () => {
                   }}
                 >
                   <CardContent>
-                    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: "bold",
+                        mb: 1,
+                        color: "#FFD700",
+                      }}
+                    >
                       {experience.duration}
                     </Typography>
-                    <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                      {experience.title} - {experience.company}
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: "bold",
+                        mb: 1,
+                      }}
+                    >
+                      {experience.title}
                     </Typography>
-                    <List sx={{ mt: 2, pl: 2 }}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        color: "#dcdcdc",
+                        mb: 2,
+                      }}
+                    >
+                      {experience.company}
+                    </Typography>
+                    <List sx={{ pl: 2 }}>
                       {experience.points.map((point, idx) => (
                         <motion.div
                           key={idx}
@@ -113,20 +184,17 @@ const Work = () => {
                         >
                           <ListItem
                             sx={{
+                              position: "relative",
+                              pl: 2,
                               "&::before": {
                                 content: '""',
                                 position: "absolute",
-                                left: "-15px",
-                                top: "10px",
+                                left: 0,
+                                top: "12px",
                                 width: "8px",
                                 height: "8px",
                                 backgroundColor: "#FFD700",
                                 borderRadius: "50%",
-                                transition: "0.3s ease-in-out",
-                              },
-                              "&:hover::before": {
-                                backgroundColor: "white",
-                                boxShadow: "0 0 10px #FFD700",
                               },
                             }}
                           >
