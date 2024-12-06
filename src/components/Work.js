@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Box, Typography, Grid, Card, CardContent, List, ListItem } from "@mui/material";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const experiences = [
@@ -42,6 +41,12 @@ const Work = () => {
     },
   ];
 
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section
       id="work"
@@ -52,73 +57,87 @@ const Work = () => {
       }}
     >
       <Box sx={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
-        <Typography
-          variant="h3"
-          sx={{
-            fontWeight: "bold",
-            mb: 6,
-            textAlign: "center",
-          }}
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.3 }}
         >
-          Experience
-        </Typography>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: "bold",
+              mb: 6,
+            }}
+          >
+            Experience
+          </Typography>
+        </motion.div>
+
+        {/* Experiences */}
         <Grid container spacing={4}>
           {experiences.map((experience, index) => (
             <Grid item xs={12} key={index}>
-              <Card
-                sx={{
-                  padding: 3,
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  color: "white",
-                  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
-                  borderRadius: "12px",
-                }}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.3 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                variants={cardVariants}
               >
-                <CardContent>
-                  <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
-                    {experience.duration}
-                  </Typography>
-                  <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                    {experience.title} - {experience.company}
-                  </Typography>
-                  <List
-                    sx={{
-                      mt: 2,
-                      pl: 2,
-                      "& .MuiListItem-root": {
-                        position: "relative",
-                        marginBottom: "10px",
-                        animation: "fadeIn 0.5s ease-in-out",
-                      },
-                    }}
-                  >
-                    {experience.points.map((point, idx) => (
-                      <ListItem
-                        key={idx}
-                        sx={{
-                          "&::before": {
-                            content: '""',
-                            position: "absolute",
-                            left: "-15px",
-                            top: "10px",
-                            width: "8px",
-                            height: "8px",
-                            backgroundColor: "#FFD700",
-                            borderRadius: "50%",
-                            transition: "0.3s ease-in-out",
-                          },
-                          "&:hover::before": {
-                            backgroundColor: "white",
-                            boxShadow: "0 0 10px #FFD700",
-                          },
-                        }}
-                      >
-                        {point}
-                      </ListItem>
-                    ))}
-                  </List>
-                </CardContent>
-              </Card>
+                <Card
+                  sx={{
+                    padding: 3,
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    color: "white",
+                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+                    borderRadius: "12px",
+                  }}
+                >
+                  <CardContent>
+                    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
+                      {experience.duration}
+                    </Typography>
+                    <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                      {experience.title} - {experience.company}
+                    </Typography>
+                    <List sx={{ mt: 2, pl: 2 }}>
+                      {experience.points.map((point, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ amount: 0.3 }}
+                          transition={{ duration: 0.5, delay: idx * 0.1 }}
+                        >
+                          <ListItem
+                            sx={{
+                              "&::before": {
+                                content: '""',
+                                position: "absolute",
+                                left: "-15px",
+                                top: "10px",
+                                width: "8px",
+                                height: "8px",
+                                backgroundColor: "#FFD700",
+                                borderRadius: "50%",
+                                transition: "0.3s ease-in-out",
+                              },
+                              "&:hover::before": {
+                                backgroundColor: "white",
+                                boxShadow: "0 0 10px #FFD700",
+                              },
+                            }}
+                          >
+                            {point}
+                          </ListItem>
+                        </motion.div>
+                      ))}
+                    </List>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </Grid>
           ))}
         </Grid>
