@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent, Button, CardMedia } from "@mui/material";
 import { motion } from "framer-motion";
-import profileImage from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg"  
-import project1 from "../assets/90b6f2_96cdaef8e55c4447b8ac75564ce13538~mv2.gif"; 
+import project1 from "../assets/90b6f2_96cdaef8e55c4447b8ac75564ce13538~mv2.gif";
 import project2 from "../assets/NYRT.gif";
 import project3 from "../assets/36010.gif";
+import project4 from "../assets/emotion.gif";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const projects = [
@@ -24,15 +24,11 @@ const projects = [
     image: project3,
   },
   {
-    title: "Secure Password Authentication",
-    subtitle: "Portfolio Framer Template",
-    image: project1,
-  },
-  {
     title: "Emotion Detection Using Voice Recognition",
     subtitle: "Portfolio Framer Template",
-    image: project2,
+    image: project4,
   },
+ 
 ];
 
 const Projects = () => {
@@ -41,60 +37,16 @@ const Projects = () => {
       id="projects"
       style={{
         display: "flex",
+        justifyContent: "center", 
+        alignItems: "center", 
         backgroundColor: "#1a1a1a",
         color: "white",
         padding: "50px 20px",
+        minHeight: "100vh", 
       }}
     >
-      {/* Fixed Left Section */}
-      <Box
-        sx={{
-          position: "sticky",
-          top: "20px",
-          width: "30%",
-          maxWidth: "300px",
-          height: "100%",
-          marginRight: "20px",
-          backgroundColor: "white",
-          borderRadius: "20px",
-          padding: "20px",
-        }}
-      >
-        <Box
-          component="img"
-          src={profileImage}
-          alt="Profile"
-          sx={{
-            width: "100%",
-            borderRadius: "20px",
-            marginBottom: "10px",
-          }}
-        />
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            mb: 1,
-            color: "black",
-            textAlign: "center",
-          }}
-        >
-          ADITI AKHAURI
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "gray",
-            fontSize: "0.9rem",
-            textAlign: "center",
-          }}
-        >
-          A Software Engineer who has developed countless innovative solutions.
-        </Typography>
-      </Box>
-
-      {/* Right Section: Projects */}
-      <Box sx={{ width: "70%" }}>
+    
+      <Box sx={{ width: "100%", maxWidth: "2000px", textAlign: "center" }}>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,14 +61,14 @@ const Projects = () => {
               textAlign: "center",
             }}
           >
-            RECENT PROJECTS
+            RECENT <span style={{ color: "#555" }}>PROJECTS</span>
           </Typography>
         </motion.div>
 
-        {/* Project List */}
-        <Grid container spacing={4}>
+     
+        <Grid container spacing={4} justifyContent="center">
           {projects.map((project, index) => (
-            <Grid item xs={12} key={index}>
+            <Grid item xs={12} md={8} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -139,11 +91,11 @@ const Projects = () => {
                     image={project.image}
                     alt={project.title}
                     sx={{
-                      width: "70px",
-                      height: "70px",
+                      width: "100px",
+                      height: "90px",
                       borderRadius: "10px",
                       marginRight: 2,
-                      border: "2px solid #6C63FF",
+                   
                     }}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>

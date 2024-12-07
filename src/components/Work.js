@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent, List, ListItem } from "@mui/material";
 import { motion } from "framer-motion";
-import profileImage from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg" 
 
 const Work = () => {
   const experiences = [
@@ -51,61 +50,22 @@ const Work = () => {
     <section
       id="work"
       style={{
-        padding: "50px 20px",
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center", 
+        minHeight: "100vh", 
         backgroundColor: "#1a1a1a",
         color: "white",
-        display: "flex",
+        padding: "50px 20px",
       }}
     >
-      {/* Fixed Left Section */}
       <Box
         sx={{
-          position: "sticky",
-          top: "20px",
-          width: "30%",
-          maxWidth: "300px",
-          height: "100%",
-          marginRight: "20px",
-          backgroundColor: "white",
-          borderRadius: "20px",
-          padding: "20px",
+          width: "100%",
+          maxWidth: "1200px", 
+          textAlign: "center",
         }}
       >
-        <Box
-          component="img"
-          src={profileImage}
-          alt="Profile"
-          sx={{
-            width: "100%",
-            borderRadius: "20px",
-            marginBottom: "10px",
-          }}
-        />
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            mb: 1,
-            color: "black",
-            textAlign: "center",
-          }}
-        >
-          ADITI AKHAURI
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "gray",
-            fontSize: "0.9rem",
-            textAlign: "center",
-          }}
-        >
-          A Software Engineer who has developed countless innovative solutions.
-        </Typography>
-      </Box>
-
-      {/* Right Section: Experience */}
-      <Box sx={{ width: "70%" }}>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,14 +77,13 @@ const Work = () => {
             sx={{
               fontWeight: "bold",
               mb: 6,
-              textAlign: "center",
             }}
           >
-            1+ YEARS OF EXPERIENCE
+            WORK <span style={{ color: "#555" }}>EXPERIENCE</span>
           </Typography>
         </motion.div>
 
-        {/* Experience Cards */}
+       
         <Grid container spacing={4}>
           {experiences.map((experience, index) => (
             <Grid item xs={12} key={index}>
@@ -142,6 +101,7 @@ const Work = () => {
                     color: "white",
                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
                     borderRadius: "12px",
+                    textAlign: "left",
                   }}
                 >
                   <CardContent>

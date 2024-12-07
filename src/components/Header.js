@@ -1,10 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, Box } from "@mui/material";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import FolderOpenOutlinedIcon from "@mui/icons-material/FolderOpenOutlined";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import BuildOutlinedIcon from "@mui/icons-material/BuildOutlined";
-import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
@@ -35,84 +30,100 @@ const Header = () => {
             fontSize: "1.2rem",
           }}
         >
-          <span style={{ color: "#FF4500" }}>Aditi</span>Akhauri
+    
         </Box>
 
-        {/* Navigation Icons */}
+        {/* Navigation Links */}
         <Box
           sx={{
             display: "flex",
-            gap: 2,
+            gap: 3,
           }}
         >
           {/* Home */}
-          <ScrollLink to="home" smooth={true} duration={800}>
-            <IconButton
+          <ScrollLink to="hero" smooth={true} duration={800}>
+            <Button
               sx={{
                 color: "white",
+                textTransform: "none",
+                fontSize: "1rem",
+                fontWeight: "bold",
                 "&:hover": {
                   color: "#FFD700",
                 },
               }}
             >
-              <HomeOutlinedIcon />
-            </IconButton>
+              Home
+            </Button>
           </ScrollLink>
 
-          {/* Projects */}
-          <ScrollLink to="projects" smooth={true} duration={800}>
-            <IconButton
-              sx={{
-                color: "white",
-                "&:hover": {
-                  color: "#FFD700",
-                },
-              }}
-            >
-              <FolderOpenOutlinedIcon />
-            </IconButton>
-          </ScrollLink>
+          
 
           {/* Experience */}
-          <ScrollLink to="experience" smooth={true} duration={800}>
-            <IconButton
+          <ScrollLink to="work" smooth={true} duration={800}>
+            <Button
               sx={{
                 color: "white",
+                textTransform: "none",
+                fontSize: "1rem",
+                fontWeight: "bold",
                 "&:hover": {
                   color: "#FFD700",
                 },
               }}
             >
-              <WorkOutlineOutlinedIcon />
-            </IconButton>
+              Experience
+            </Button>
+          </ScrollLink>
+          {/* Projects */}
+          <ScrollLink to="projects" smooth={true} duration={800}>
+            <Button
+              sx={{
+                color: "white",
+                textTransform: "none",
+                fontSize: "1rem",
+                fontWeight: "bold",
+                "&:hover": {
+                  color: "#FFD700",
+                },
+              }}
+            >
+              Projects
+            </Button>
           </ScrollLink>
 
           {/* Tools */}
           <ScrollLink to="tools" smooth={true} duration={800}>
-            <IconButton
+            <Button
               sx={{
                 color: "white",
+                textTransform: "none",
+                fontSize: "1rem",
+                fontWeight: "bold",
                 "&:hover": {
                   color: "#FFD700",
                 },
               }}
             >
-              <BuildOutlinedIcon />
-            </IconButton>
+              Tools
+            </Button>
           </ScrollLink>
 
           {/* Contact */}
           <ScrollLink to="contact" smooth={true} duration={800}>
-            <IconButton
+            <Button
               sx={{
                 color: "white",
+                textTransform: "none",
+                fontSize: "1rem",
+                fontWeight: "bold",
                 "&:hover": {
                   color: "#FFD700",
                 },
               }}
             >
-              <ContactMailOutlinedIcon />
-            </IconButton>
+              Contact
+            </Button>
           </ScrollLink>
         </Box>
       </Toolbar>

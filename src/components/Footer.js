@@ -16,7 +16,7 @@ const Footer = () => {
       }}
     >
       <Grid container alignItems="center" justifyContent="space-between">
-        {/* Left Section */}
+    
         <Grid item xs={12} md={6} textAlign={{ xs: "center", md: "left" }}>
           <Typography variant="body2" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
             Aditi Akhauri © 2024

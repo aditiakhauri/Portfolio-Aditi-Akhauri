@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Box, Typography, Grid, TextField, Button, MenuItem } from "@mui/material";
-import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { motion } from "framer-motion";
-import profileImage from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg" 
-
 import emailjs from "emailjs-com";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +33,6 @@ const Contact = () => {
       return;
     }
 
-
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
@@ -48,7 +49,7 @@ const Contact = () => {
             message: "",
           });
         },
-        (error) => {
+        () => {
           alert("Failed to send your message. Please try again later.");
         }
       );
@@ -59,66 +60,28 @@ const Contact = () => {
       id="contact"
       style={{
         display: "flex",
+        justifyContent: "center", 
+        alignItems: "center", 
+        minHeight: "100vh", 
         backgroundColor: "#1a1a1a",
         color: "white",
         padding: "50px 20px",
       }}
     >
-      {/* Fixed Left Section */}
+  
       <Box
         sx={{
-          position: "sticky",
-          top: "20px",
-          width: "30%",
-          maxWidth: "300px",
-          height: "100%",
-          marginRight: "20px",
-          backgroundColor: "white",
-          borderRadius: "20px",
-          padding: "20px",
+          width: "100%",
+          maxWidth: "800px", 
+          textAlign: "center",
         }}
       >
-        <Box
-          component="img"
-          src={profileImage}
-          alt="Profile"
-          sx={{
-            width: "100%",
-            borderRadius: "20px",
-            border: "4px solid #FF4500",
-            marginBottom: "10px",
-          }}
-        />
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            mb: 1,
-            color: "black",
-            textAlign: "center",
-          }}
-        >
-          ADITI AKHAURI
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "gray",
-            fontSize: "0.9rem",
-            textAlign: "center",
-          }}
-        >
-          A Software Engineer who has developed countless innovative solutions.
-        </Typography>
-      </Box>
-
-      {/* Right Section: Contact Form */}
-      <Box sx={{ width: "70%" }}>
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-          viewport={{ amount: 0.3 }}
+          variants={cardVariants}
         >
           <Typography
             variant="h3"
@@ -128,13 +91,20 @@ const Contact = () => {
               textAlign: "center",
             }}
           >
-            LET'S WORK TOGETHER
+            LET'S WORK <span style={{ color: "#555" }}>TOGETHER </span>
           </Typography>
         </motion.div>
 
-        <form onSubmit={handleSubmit}>
+        <motion.form
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+          variants={cardVariants}
+          onSubmit={handleSubmit}
+        >
           <Grid container spacing={4}>
-            {/* Name Input */}
+           
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
@@ -157,7 +127,7 @@ const Contact = () => {
               />
             </Grid>
 
-            {/* Email Input */}
+      
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
@@ -180,7 +150,7 @@ const Contact = () => {
               />
             </Grid>
 
-            {/* Budget Dropdown */}
+          
             <Grid item xs={12}>
               <TextField
                 select
@@ -208,7 +178,7 @@ const Contact = () => {
               </TextField>
             </Grid>
 
-            {/* Message Input */}
+          
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -234,7 +204,7 @@ const Contact = () => {
             </Grid>
           </Grid>
 
-          {/* Submit Button */}
+      
           <Box sx={{ textAlign: "center", mt: 4 }}>
             <Button
               type="submit"
@@ -246,18 +216,18 @@ const Contact = () => {
                 textTransform: "none",
                 fontSize: "1rem",
                 padding: "10px 20px",
-                borderRadius: "20px",
+                borderRadius: "10px",
+                minWidth: "800px",
                 "&:hover": {
                   backgroundColor: "#FFD700",
                   color: "black",
                 },
               }}
-              startIcon={<SendOutlinedIcon />}
             >
               Submit
             </Button>
           </Box>
-        </form>
+        </motion.form>
       </Box>
     </section>
   );

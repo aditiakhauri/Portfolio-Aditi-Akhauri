@@ -18,7 +18,7 @@ const Hero = () => {
         }}
       >
         <Grid container spacing={4} alignItems="center">
-          {/* Left Section */}
+     
           <Grid item xs={12} md={5} textAlign="center">
             <Box
               sx={{
@@ -73,7 +73,7 @@ const Hero = () => {
             </Box>
           </Grid>
 
-          {/* Right Section */}
+  
           <Grid item xs={12} md={7}>
             <Typography
               variant="h2"
@@ -98,7 +98,7 @@ const Hero = () => {
               products.
             </Typography>
 
-            {/* Metrics */}
+         
             <Box
               sx={{
                 display: "flex",
@@ -114,7 +114,7 @@ const Hero = () => {
                     color: "white",
                   }}
                 >
-                  +1
+                  1+
                 </Typography>
                 <Typography
                   variant="body2"
@@ -133,7 +133,7 @@ const Hero = () => {
                     color: "white",
                   }}
                 >
-                  +10
+                  10+
                 </Typography>
                 <Typography
                   variant="body2"
@@ -151,7 +151,7 @@ const Hero = () => {
             <Box sx={{ display: "flex", gap: 2 }}>
               <Box
                 sx={{
-                  background: "#FF4500",
+                  background: "#ed5d3e",
                   padding: "20px",
                   borderRadius: "12px",
                   width: "50%",
@@ -160,7 +160,7 @@ const Hero = () => {
                   cursor: "pointer",
                   "&:hover": {
 
-                    background: "#e63900",
+                    opacity:0.7,
                   },
                 }}
               >
@@ -177,7 +177,7 @@ const Hero = () => {
               </Box>
               <Box
                 sx={{
-                  background: "#ADFF2F",
+                  background: "#c1fd4b",
                   padding: "20px",
                   borderRadius: "12px",
                   width: "50%",
@@ -185,7 +185,8 @@ const Hero = () => {
                   color: "black",
                   cursor: "pointer",
                   "&:hover": {
-                    background: "#9ACD32",
+                    opacity:0.7,
+                    
                   },
                 }}
               >
