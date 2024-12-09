@@ -12,23 +12,26 @@ const projects = [
     title: "Drowsiness Detection Model",
     subtitle: "SaaS Framer Template",
     image: project1,
+    link: "https://github.com/aditiakhauri/FRUGALX-DROWSINESS-DETECTION",
   },
   {
     title: "Image Processing Application",
     subtitle: "SaaS Framer Template",
     image: project2,
+    link: "https://github.com/aditiakhauri/Image-Processing-App",
   },
   {
     title: "Secure Password Authentication",
     subtitle: "SaaS Framer Template",
     image: project3,
+    link: "https://github.com/aditiakhauri/Salting-Passwords-Python-Project",
   },
   {
     title: "Emotion Detection Using Voice Recognition",
     subtitle: "Portfolio Framer Template",
     image: project4,
+    link: "https://github.com/aditiakhauri/Emotion-Recognition-Using-Voice-Recognition",
   },
- 
 ];
 
 const Projects = () => {
@@ -37,15 +40,15 @@ const Projects = () => {
       id="projects"
       style={{
         display: "flex",
-        justifyContent: "center", 
-        alignItems: "center", 
+        justifyContent: "center",
+        alignItems: "center",
         backgroundColor: "#1a1a1a",
         color: "white",
         padding: "50px 20px",
-        minHeight: "100vh", 
+        minHeight: "100vh",
+        textDecoration: "none"
       }}
     >
-    
       <Box sx={{ width: "100%", maxWidth: "2000px", textAlign: "center" }}>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -59,13 +62,13 @@ const Projects = () => {
               fontWeight: "bold",
               mb: 6,
               textAlign: "center",
+              textDecoration: "none"
             }}
           >
             RECENT <span style={{ color: "#555" }}>PROJECTS</span>
           </Typography>
         </motion.div>
 
-     
         <Grid container spacing={4} justifyContent="center">
           {projects.map((project, index) => (
             <Grid item xs={12} md={8} key={index}>
@@ -84,7 +87,17 @@ const Projects = () => {
                     color: "white",
                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
                     borderRadius: "12px",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    "&:hover": {
+                      opacity: 0.9,
+                    },
                   }}
+                  component="a"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+      
                 >
                   <CardMedia
                     component="img"
@@ -95,7 +108,6 @@ const Projects = () => {
                       height: "90px",
                       borderRadius: "10px",
                       marginRight: 2,
-                   
                     }}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
@@ -118,11 +130,15 @@ const Projects = () => {
                     </Typography>
                   </CardContent>
                   <Button
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{
                       color: "#FF4500",
                       "&:hover": {
                         color: "#FFD700",
                       },
+                      textDecoration: "none", // Remove underline
                     }}
                   >
                     <ArrowOutwardIcon />
