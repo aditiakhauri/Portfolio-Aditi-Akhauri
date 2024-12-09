@@ -11,6 +11,7 @@ const Header = () => {
         backgroundColor: "#1a1a1a",
         padding: "10px 20px",
         zIndex: 1100,
+        boxShadow:0,
       }}
     >
       <Toolbar

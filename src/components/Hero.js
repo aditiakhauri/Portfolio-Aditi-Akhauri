@@ -18,6 +18,7 @@ const Hero = () => {
     <section id="hero">
       <Box
         sx={{
+          mt:5,
           backgroundColor: "#1a1a1a",
           color: "white",
           py: 10,
