@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Portfolio-Aditi-Akhauri/static/css/main.e6c13ad2.css",
+    "main.js": "/Portfolio-Aditi-Akhauri/static/js/main.1d973b8c.js",
+    "static/js/453.6b46e034.chunk.js": "/Portfolio-Aditi-Akhauri/static/js/453.6b46e034.chunk.js",
+    "static/media/emotion.gif": "/Portfolio-Aditi-Akhauri/static/media/emotion.7e22d1843c4ebe678548.gif",
+    "static/media/36010.gif": "/Portfolio-Aditi-Akhauri/static/media/36010.50881eb78cb6acea5945.gif",
+    "static/media/90b6f2_~mv2.gif": "/Portfolio-Aditi-Akhauri/static/media/90b6f2_96cdaef8e55c4447b8ac75564ce13538~mv2.05e8206599b07c3919de.gif",
+    "static/media/NYRT.gif": "/Portfolio-Aditi-Akhauri/static/media/NYRT.5625b63e9f751c56c1d3.gif",
+    "static/media/WhatsApp Image 2024-12-06 at 22.10.11.jpeg": "/Portfolio-Aditi-Akhauri/static/media/WhatsApp Image 2024-12-06 at 22.10.11.e2be9ffa16aabca96abc.jpeg",
+    "static/media/kubernetes.png": "/Portfolio-Aditi-Akhauri/static/media/kubernetes.b17478e8c42bbd354aa1.png",
+    "static/media/Aditi_s_Resume-2.pdf": "/Portfolio-Aditi-Akhauri/static/media/Aditi_s_Resume-2.877ea02f8c1af76834a5.pdf",
+    "static/media/apache-kafka.jpg": "/Portfolio-Aditi-Akhauri/static/media/apache-kafka.2ac199d268b9f9badc8d.jpg",
+    "static/media/flask.jpg": "/Portfolio-Aditi-Akhauri/static/media/flask.444753edd0b30876d8c0.jpg",
+    "static/media/react.png": "/Portfolio-Aditi-Akhauri/static/media/react.bcd96a19dda1a6c22077.png",
+    "static/media/django.jpeg": "/Portfolio-Aditi-Akhauri/static/media/django.78c3930463a31542c75f.jpeg",
+    "static/media/aws.webp": "/Portfolio-Aditi-Akhauri/static/media/aws.23f8acd359e3f11c2238.webp",
+    "static/media/postgresql.webp": "/Portfolio-Aditi-Akhauri/static/media/postgresql.ead3f8d5e1a37a4dfc27.webp",
+    "static/media/mysql.webp": "/Portfolio-Aditi-Akhauri/static/media/mysql.7fa3a0fd823a6d46e189.webp",
+    "static/media/docker.svg": "/Portfolio-Aditi-Akhauri/static/media/docker.b642f85caf58bc06eef39d23d02ddafe.svg",
+    "static/media/java.webp": "/Portfolio-Aditi-Akhauri/static/media/java.55452712c00158bbcad9.webp",
+    "static/media/gcp.webp": "/Portfolio-Aditi-Akhauri/static/media/gcp.246e83f097685e671274.webp",
+    "index.html": "/Portfolio-Aditi-Akhauri/index.html",
+    "main.e6c13ad2.css.map": "/Portfolio-Aditi-Akhauri/static/css/main.e6c13ad2.css.map",
+    "main.1d973b8c.js.map": "/Portfolio-Aditi-Akhauri/static/js/main.1d973b8c.js.map",
+    "453.6b46e034.chunk.js.map": "/Portfolio-Aditi-Akhauri/static/js/453.6b46e034.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.1d973b8c.js"
+  ]
+}
