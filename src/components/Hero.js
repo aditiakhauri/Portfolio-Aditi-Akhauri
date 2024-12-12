@@ -5,7 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import profile from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg";
-import resumeFile from "../assets/Aditi_s_Resume-2.pdf"; 
+import resumeFile from "../assets/Aditi_s_Resume.pdf"; 
 const Hero = () => {
   const handleResumeDownload = () => {
 
@@ -84,7 +84,7 @@ const Hero = () => {
                 </IconButton>
                 <IconButton
                   component="a"
-                  href="https://www.linkedin.com/in/aditi-akhauri-412530202/"
+                  href="https://www.linkedin.com/in/aditi-akhauri/"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ color: "black" }}

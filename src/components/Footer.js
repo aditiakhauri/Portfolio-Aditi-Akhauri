@@ -26,7 +26,7 @@ const Footer = () => {
         <Grid item xs={12} md={6} textAlign={{ xs: "center", md: "right" }}>
           <IconButton
             component="a"
-            href="https://www.linkedin.com/in/aditi-akhauri-412530202/"
+            href="https://www.linkedin.com/in/aditi-akhauri/"
             target="_blank"
             sx={{ color: "white", mx: 0.5 }}
           >
