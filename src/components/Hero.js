@@ -8,10 +8,12 @@ import profile from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg";
 import resumeFile from "../assets/Aditi_s_Resume.pdf"; 
 const Hero = () => {
   const handleResumeDownload = () => {
-
     const link = document.createElement("a");
     link.href = resumeFile;
-    link.download = "Aditi_Akhauri_Resume.pdf"; 
+    link.download = "Aditi_Akhauri_Resume.pdf";
+    document.body.appendChild(link); 
+    link.click(); 
+    document.body.removeChild(link); 
   };
 
   return (
