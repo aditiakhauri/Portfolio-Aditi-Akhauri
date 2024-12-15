@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Box, Typography, Grid, TextField, Button, MenuItem } from "@mui/material";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
@@ -16,12 +16,9 @@ const Contact = () => {
     message: "",
   });
 
-  const [error, setError] = useState(false);
+ 
 
-  useEffect(() => {
-    alert("Error Sending email, please refresh the page and try again!");
-  }, [error])
-
+ 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -33,7 +30,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
-      setError(true);
       return;
     }
 
