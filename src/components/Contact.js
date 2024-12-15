@@ -20,7 +20,7 @@ const Contact = () => {
 
   useEffect(() => {
     alert("Error Sending email, please refresh the page and try again!");
-  })
+  }, [error])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
