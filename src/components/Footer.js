@@ -22,7 +22,7 @@ const Footer = () => {
           </Typography>
         </Grid>
 
-        {/* Right Section: Social Icons */}
+        {/* Right Section: Social Icons yes*/}
         <Grid item xs={12} md={6} textAlign={{ xs: "center", md: "right" }}>
           <IconButton
             component="a"
