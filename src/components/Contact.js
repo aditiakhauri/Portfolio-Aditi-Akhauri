@@ -18,6 +18,10 @@ const Contact = () => {
 
   const [error, setError] = useState(false);
 
+  useEffect(() => {
+    alert("Error Sending email, please refresh the page and try again!");
+  })
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
