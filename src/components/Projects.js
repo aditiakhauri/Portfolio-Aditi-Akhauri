@@ -10,25 +10,25 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 const projects = [
   {
     title: "Drowsiness Detection Model",
-    subtitle: "SaaS Framer Template",
+    subtitle: "Jupyter Notebook, kaggle, HTML, CSS",
     image: project1,
     link: "https://github.com/aditiakhauri/FRUGALX-DROWSINESS-DETECTION",
   },
   {
     title: "Image Processing Application",
-    subtitle: "SaaS Framer Template",
+    subtitle: "Flask, Celery, Cloud, PostgreSQL",
     image: project2,
     link: "https://github.com/aditiakhauri/Image-Processing-App",
   },
   {
     title: "Secure Password Authentication",
-    subtitle: "SaaS Framer Template",
+    subtitle: "Python, MySQL",
     image: project3,
     link: "https://github.com/aditiakhauri/Salting-Passwords-Python-Project",
   },
   {
     title: "Emotion Detection Using Voice Recognition",
-    subtitle: "Portfolio Framer Template",
+    subtitle: "Jupyter notebook, Kaggle",
     image: project4,
     link: "https://github.com/aditiakhauri/Emotion-Recognition-Using-Voice-Recognition",
   },
