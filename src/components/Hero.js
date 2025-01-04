@@ -226,7 +226,7 @@ const Hero = () => {
                     mb: 1,
                   }}
                 >
-                  FULL STACK, CLOUD DEVELOPMENT, CI/CD, BLOCKHAIN
+                  FULL STACK, CLOUD DEVELOPMENT, CI/CD, BLOCKCHAIN
                 </Typography>
               </Box>
               <Box
