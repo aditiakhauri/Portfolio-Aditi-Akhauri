@@ -3,24 +3,17 @@ import { Box, Typography, Grid, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import LinkIcon from "@mui/icons-material/Link";
 import profile from "../assets/WhatsApp Image 2024-12-06 at 22.10.11.jpeg";
-import resumeFile from "../assets/Aditi_s_Resume.pdf"; 
+
 const Hero = () => {
-  const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href = resumeFile;
-    link.download = "Aditi_Akhauri_Resume.pdf";
-    document.body.appendChild(link); 
-    link.click(); 
-    document.body.removeChild(link); 
-  };
+  const overleafResumeLink = "https://www.overleaf.com/read/rzfxvghvdnyr#449811";
 
   return (
     <section id="hero">
       <Box
         sx={{
-          mt:5,
+          mt: 5,
           backgroundColor: "#1a1a1a",
           color: "white",
           py: 10,
@@ -28,7 +21,6 @@ const Hero = () => {
         }}
       >
         <Grid container spacing={4} alignItems="center">
-       
           <Grid item xs={12} md={5} textAlign="center">
             <Box
               sx={{
@@ -104,7 +96,6 @@ const Hero = () => {
             </Box>
           </Grid>
 
-        
           <Grid item xs={12} md={7}>
             <Typography
               variant="h2"
@@ -131,7 +122,6 @@ const Hero = () => {
               software that solves real-world problems.
             </Typography>
 
-     
             <Box
               sx={{
                 display: "flex",
@@ -151,6 +141,7 @@ const Hero = () => {
                   width: "150px",
                   height: "100px",
                   textAlign: "center",
+                  textDecoration: "none",
                 }}
               >
                 <Typography
@@ -184,6 +175,7 @@ const Hero = () => {
                   height: "100px",
                   textAlign: "center",
                   ml: 2,
+                  textDecoration: "none",
                 }}
               >
                 <Typography
@@ -216,7 +208,6 @@ const Hero = () => {
                   width: "50%",
                   textAlign: "center",
                   color: "white",
-                 
                 }}
               >
                 <Typography
@@ -240,13 +231,17 @@ const Hero = () => {
                   cursor: "pointer",
                   display: "inline-flex",
                   alignItems: "center",
+                  textDecoration: "none",
                   justifyContent: "center",
                   gap: 1,
                   "&:hover": {
                     opacity: 0.7,
                   },
                 }}
-                onClick={handleResumeDownload}
+                component="a"
+                href={overleafResumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Typography
                   variant="body1"
@@ -254,11 +249,15 @@ const Hero = () => {
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
+                    textDecoration: "none", 
                   }}
                 >
                   RESUME
                 </Typography>
-                <FileDownloadIcon fontSize="small" />
+                <LinkIcon
+                  fontSize="small"
+                 
+                />
               </Box>
             </Box>
           </Grid>

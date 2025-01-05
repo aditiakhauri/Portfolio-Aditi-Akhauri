@@ -62,7 +62,7 @@ const Tools = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ amount: 0.3 }}
         >
           <Typography
@@ -84,7 +84,7 @@ const Tools = () => {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 variants={cardVariants}
                 viewport={{ amount: 0.3 }}
               >
