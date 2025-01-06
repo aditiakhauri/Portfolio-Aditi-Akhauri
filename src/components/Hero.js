@@ -16,11 +16,12 @@ const Hero = () => {
           mt: 5,
           backgroundColor: "#1a1a1a",
           color: "white",
-          py: 10,
-          px: 4,
+          py: { xs: 5, md: 10 },
+          px: { xs: 2, md: 4 },
         }}
       >
         <Grid container spacing={4} alignItems="center">
+          {/* Profile Card */}
           <Grid item xs={12} md={5} textAlign="center">
             <Box
               sx={{
@@ -96,13 +97,15 @@ const Hero = () => {
             </Box>
           </Grid>
 
+          {/* Hero Text and Stats */}
           <Grid item xs={12} md={7}>
             <Typography
               variant="h2"
               sx={{
                 fontWeight: "bold",
                 mb: 2,
-                fontSize: "3rem",
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               SOFTWARE <span style={{ color: "#555" }}>ENGINEER</span>
@@ -112,7 +115,8 @@ const Hero = () => {
               sx={{
                 color: "#dcdcdc",
                 mb: 4,
-                fontSize: "1.2rem",
+                fontSize: { xs: "1rem", sm: "1.2rem" },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               Driven software engineer with expertise in building scalable
@@ -122,11 +126,15 @@ const Hero = () => {
               software that solves real-world problems.
             </Typography>
 
+            {/* Stats */}
             <Box
               sx={{
                 display: "flex",
-                gap: 4,
+                flexDirection: { xs: "column", sm: "row" },
+                gap: 2,
                 mb: 6,
+                justifyContent: { xs: "center", sm: "flex-start" }, 
+                alignItems: "center",
               }}
             >
               <Box
@@ -137,11 +145,9 @@ const Hero = () => {
                   justifyContent: "center",
                   background: "rgba(255, 255, 255, 0.1)",
                   borderRadius: "12px",
-                  padding: "20px",
-                  width: "150px",
-                  height: "100px",
+                  width: "200px",
+                  height: "150px",
                   textAlign: "center",
-                  textDecoration: "none",
                 }}
               >
                 <Typography
@@ -149,6 +155,7 @@ const Hero = () => {
                   sx={{
                     fontWeight: "bold",
                     color: "white",
+                    fontSize: { xs: "1.5rem", md: "2rem" },
                   }}
                 >
                   1+
@@ -170,12 +177,9 @@ const Hero = () => {
                   justifyContent: "center",
                   background: "rgba(255, 255, 255, 0.1)",
                   borderRadius: "12px",
-                  padding: "20px",
-                  width: "150px",
-                  height: "100px",
+                  width: "200px",
+                  height: "150px",
                   textAlign: "center",
-                  ml: 2,
-                  textDecoration: "none",
                 }}
               >
                 <Typography
@@ -183,6 +187,7 @@ const Hero = () => {
                   sx={{
                     fontWeight: "bold",
                     color: "white",
+                    fontSize: { xs: "1.5rem", md: "2rem" },
                   }}
                 >
                   10+
@@ -198,16 +203,23 @@ const Hero = () => {
               </Box>
             </Box>
 
-            {/* Skills */}
-            <Box sx={{ display: "flex", gap: 2 }}>
+            {/* Skills and Resume */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                gap: 2,
+              }}
+            >
               <Box
                 sx={{
                   background: "#ed5d3e",
                   padding: "20px",
                   borderRadius: "12px",
-                  width: "50%",
+                  flex: 1,
                   textAlign: "center",
                   color: "white",
+                  
                 }}
               >
                 <Typography
@@ -215,6 +227,7 @@ const Hero = () => {
                   sx={{
                     fontWeight: "bold",
                     mb: 1,
+                    fontSize: { xs: "0.9rem", sm: "1rem" },
                   }}
                 >
                   FULL STACK, CLOUD DEVELOPMENT, CI/CD, BLOCKCHAIN
@@ -225,14 +238,14 @@ const Hero = () => {
                   background: "#AFDD57",
                   padding: "20px",
                   borderRadius: "12px",
-                  width: "50%",
+                  flex: 1,
                   textAlign: "center",
                   color: "black",
                   cursor: "pointer",
                   display: "inline-flex",
                   alignItems: "center",
-                  textDecoration: "none",
                   justifyContent: "center",
+                  textDecoration:"none",
                   gap: 1,
                   "&:hover": {
                     opacity: 0.7,
@@ -249,15 +262,11 @@ const Hero = () => {
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
-                    textDecoration: "none", 
                   }}
                 >
                   RESUME
                 </Typography>
-                <LinkIcon
-                  fontSize="small"
-                 
-                />
+                <LinkIcon fontSize="small" />
               </Box>
             </Box>
           </Grid>

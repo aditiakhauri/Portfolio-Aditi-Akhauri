@@ -1,8 +1,20 @@
-import React from "react";
-import { AppBar, Toolbar, Button, Box } from "@mui/material";
+import React, { useState } from "react";
+import { AppBar, Toolbar, Button, Box, IconButton, Menu, MenuItem } from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const isMenuOpen = Boolean(anchorEl);
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -11,7 +23,7 @@ const Header = () => {
         backgroundColor: "#1a1a1a",
         padding: "10px 20px",
         zIndex: 1100,
-        boxShadow:0,
+        boxShadow: 0,
       }}
     >
       <Toolbar
@@ -21,24 +33,12 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        {/* Logo */}
+        {/* Navigation Links for larger screens */}
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            fontSize: "1.2rem",
-          }}
-        >
-    
-        </Box>
-
-        {/* Navigation Links */}
-        <Box
-          sx={{
-            display: "flex",
+            display: { xs: "none", md: "flex" }, // Hide on small screens
             gap: 3,
+            ml: "auto", // Align menu items to the right
           }}
         >
           {/* Home */}
@@ -58,9 +58,7 @@ const Header = () => {
             </Button>
           </ScrollLink>
 
-          
-
-          {/* Experience */}
+          {/* Experience (Points to "work") */}
           <ScrollLink to="work" smooth={true} duration={800}>
             <Button
               sx={{
@@ -76,6 +74,7 @@ const Header = () => {
               Experience
             </Button>
           </ScrollLink>
+
           {/* Projects */}
           <ScrollLink to="projects" smooth={true} duration={800}>
             <Button
@@ -126,6 +125,43 @@ const Header = () => {
               Contact
             </Button>
           </ScrollLink>
+        </Box>
+
+        {/* Hamburger Menu for smaller screens */}
+        <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleMenuOpen}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            anchorEl={anchorEl}
+            open={isMenuOpen}
+            onClose={handleMenuClose}
+            sx={{
+              display: { xs: "block", md: "none" }, // Show only on small screens
+            }}
+          >
+            {/* Menu Items */}
+            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="hero" smooth={true} duration={800}>
+              Home
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="work" smooth={true} duration={800}>
+              Experience
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="projects" smooth={true} duration={800}>
+              Projects
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="tools" smooth={true} duration={800}>
+              Tools
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="contact" smooth={true} duration={800}>
+              Contact
+            </MenuItem>
+          </Menu>
         </Box>
       </Toolbar>
     </AppBar>

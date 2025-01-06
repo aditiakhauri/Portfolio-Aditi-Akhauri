@@ -16,9 +16,6 @@ const Contact = () => {
     message: "",
   });
 
- 
-
- 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -60,19 +57,18 @@ const Contact = () => {
       id="contact"
       style={{
         display: "flex",
-        justifyContent: "center", 
-        alignItems: "center", 
-        minHeight: "100vh", 
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
         backgroundColor: "#1a1a1a",
         color: "white",
         padding: "50px 20px",
       }}
     >
-  
       <Box
         sx={{
           width: "100%",
-          maxWidth: "800px", 
+          maxWidth: "800px",
           textAlign: "center",
         }}
       >
@@ -87,11 +83,12 @@ const Contact = () => {
             variant="h3"
             sx={{
               fontWeight: "bold",
-              mb: 6,
+              mb: 4,
               textAlign: "center",
+              fontSize: { xs: "1.8rem", sm: "2.5rem", md: "3rem" }, // Responsive font size
             }}
           >
-            LET'S WORK <span style={{ color: "#555" }}>TOGETHER </span>
+            LET'S WORK <span style={{ color: "#555" }}>TOGETHER</span>
           </Typography>
         </motion.div>
 
@@ -103,8 +100,7 @@ const Contact = () => {
           variants={cardVariants}
           onSubmit={handleSubmit}
         >
-          <Grid container spacing={4}>
-           
+          <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
@@ -115,19 +111,12 @@ const Contact = () => {
                 onChange={handleInputChange}
                 sx={{
                   backgroundColor: "#333",
-                  color: "white",
                   borderRadius: "5px",
-                  "& .MuiFilledInput-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "#aaa",
-                  },
+                  "& .MuiFilledInput-root": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "#aaa" },
                 }}
               />
             </Grid>
-
-      
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
@@ -138,19 +127,12 @@ const Contact = () => {
                 onChange={handleInputChange}
                 sx={{
                   backgroundColor: "#333",
-                  color: "white",
                   borderRadius: "5px",
-                  "& .MuiFilledInput-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "#aaa",
-                  },
+                  "& .MuiFilledInput-root": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "#aaa" },
                 }}
               />
             </Grid>
-
-          
             <Grid item xs={12}>
               <TextField
                 select
@@ -162,14 +144,9 @@ const Contact = () => {
                 onChange={handleInputChange}
                 sx={{
                   backgroundColor: "#333",
-                  color: "white",
                   borderRadius: "5px",
-                  "& .MuiFilledInput-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "#aaa",
-                  },
+                  "& .MuiFilledInput-root": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "#aaa" },
                 }}
               >
                 <MenuItem value="Below $500">Below $500</MenuItem>
@@ -177,8 +154,6 @@ const Contact = () => {
                 <MenuItem value="Above $1000">Above $1000</MenuItem>
               </TextField>
             </Grid>
-
-          
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -191,33 +166,28 @@ const Contact = () => {
                 rows={4}
                 sx={{
                   backgroundColor: "#333",
-                  color: "white",
                   borderRadius: "5px",
-                  "& .MuiFilledInput-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "#aaa",
-                  },
+                  "& .MuiFilledInput-root": { color: "white" },
+                  "& .MuiInputLabel-root": { color: "#aaa" },
                 }}
               />
             </Grid>
           </Grid>
 
-      
           <Box sx={{ textAlign: "center", mt: 4 }}>
             <Button
               type="submit"
               variant="contained"
+              fullWidth // Ensures button takes full width
               sx={{
                 backgroundColor: "#FF4500",
                 color: "white",
                 fontWeight: "bold",
                 textTransform: "none",
-                fontSize: "1rem",
-                padding: "10px 20px",
+                fontSize: { xs: "0.9rem", sm: "1rem" }, // Responsive font size
+                padding: { xs: "8px 16px", sm: "10px 20px" }, // Responsive padding
                 borderRadius: "10px",
-                minWidth: "800px",
+                maxWidth: "none", // Removes width constraints
                 "&:hover": {
                   backgroundColor: "#FFD700",
                   color: "black",
