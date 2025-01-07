@@ -33,15 +33,14 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        {/* Navigation Links for larger screens */}
+        
         <Box
           sx={{
-            display: { xs: "none", md: "flex" }, // Hide on small screens
+            display: { xs: "none", md: "flex" },
             gap: 3,
-            ml: "auto", // Align menu items to the right
+            ml: "auto",
           }}
         >
-          {/* Home */}
           <ScrollLink to="hero" smooth={true} duration={800}>
             <Button
               sx={{
@@ -57,8 +56,6 @@ const Header = () => {
               Home
             </Button>
           </ScrollLink>
-
-          {/* Experience (Points to "work") */}
           <ScrollLink to="work" smooth={true} duration={800}>
             <Button
               sx={{
@@ -74,8 +71,6 @@ const Header = () => {
               Experience
             </Button>
           </ScrollLink>
-
-          {/* Projects */}
           <ScrollLink to="projects" smooth={true} duration={800}>
             <Button
               sx={{
@@ -91,8 +86,6 @@ const Header = () => {
               Projects
             </Button>
           </ScrollLink>
-
-          {/* Tools */}
           <ScrollLink to="tools" smooth={true} duration={800}>
             <Button
               sx={{
@@ -108,8 +101,6 @@ const Header = () => {
               Tools
             </Button>
           </ScrollLink>
-
-          {/* Contact */}
           <ScrollLink to="contact" smooth={true} duration={800}>
             <Button
               sx={{
@@ -127,7 +118,7 @@ const Header = () => {
           </ScrollLink>
         </Box>
 
-        {/* Hamburger Menu for smaller screens */}
+     
         <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>
           <IconButton
             edge="start"
@@ -142,24 +133,102 @@ const Header = () => {
             open={isMenuOpen}
             onClose={handleMenuClose}
             sx={{
-              display: { xs: "block", md: "none" }, // Show only on small screens
+              display: { xs: "block", md: "none" },
+              "& .MuiPaper-root": {
+                backgroundColor: "#1a1a1a", 
+              },
             }}
           >
-            {/* Menu Items */}
-            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="hero" smooth={true} duration={800}>
-              Home
+      
+            <MenuItem
+              onClick={handleMenuClose}
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "#FFD700", 
+                },
+              }}
+            >
+              <ScrollLink
+                to="hero"
+                smooth={true}
+                duration={800}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Home
+              </ScrollLink>
             </MenuItem>
-            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="work" smooth={true} duration={800}>
-              Experience
+            <MenuItem
+              onClick={handleMenuClose}
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "#FFD700",
+                },
+              }}
+            >
+              <ScrollLink
+                to="work"
+                smooth={true}
+                duration={800}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Experience
+              </ScrollLink>
             </MenuItem>
-            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="projects" smooth={true} duration={800}>
-              Projects
+            <MenuItem
+              onClick={handleMenuClose}
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "#FFD700",
+                },
+              }}
+            >
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={800}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Projects
+              </ScrollLink>
             </MenuItem>
-            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="tools" smooth={true} duration={800}>
-              Tools
+            <MenuItem
+              onClick={handleMenuClose}
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "#FFD700",
+                },
+              }}
+            >
+              <ScrollLink
+                to="tools"
+                smooth={true}
+                duration={800}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Tools
+              </ScrollLink>
             </MenuItem>
-            <MenuItem onClick={handleMenuClose} component={ScrollLink} to="contact" smooth={true} duration={800}>
-              Contact
+            <MenuItem
+              onClick={handleMenuClose}
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "#FFD700",
+                },
+              }}
+            >
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={800}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Contact
+              </ScrollLink>
             </MenuItem>
           </Menu>
         </Box>
