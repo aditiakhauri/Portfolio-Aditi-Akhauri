@@ -10,17 +10,17 @@ const Footer = () => {
       sx={{
         backgroundColor: "#1a1a1a",
         color: "white",
-        py: 3, // Vertical padding
-        px: 4, // Horizontal padding
+        py: 3, 
+        px: 4, 
       }}
     >
       <Grid container alignItems="center">
-        {/* Left Section: Name and Copyright */}
+       
         <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "left" } }}>
           <Typography
             variant="body2"
             sx={{
-              fontSize: { xs: "0.9rem", sm: "1rem" }, // Responsive font size
+              fontSize: { xs: "0.9rem", sm: "1rem" }, 
               fontWeight: "bold",
             }}
           >
@@ -28,7 +28,6 @@ const Footer = () => {
           </Typography>
         </Grid>
 
-        {/* Right Section: Social Icons */}
         <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "right" }, mt: { xs: 2, md: 0 } }}>
           <IconButton
             component="a"
@@ -36,10 +35,10 @@ const Footer = () => {
             target="_blank"
             sx={{
               color: "white",
-              mx: 1, // Horizontal margin between icons
+              mx: 1, 
               transition: "color 0.3s",
               "&:hover": {
-                color: "#0e76a8", // LinkedIn blue
+                color: "#0e76a8", 
               },
             }}
           >
@@ -51,10 +50,10 @@ const Footer = () => {
             target="_blank"
             sx={{
               color: "white",
-              mx: 1, // Horizontal margin between icons
+              mx: 1,
               transition: "color 0.3s",
               "&:hover": {
-                color: "#333", // GitHub dark gray
+                color: "#333", 
               },
             }}
           >

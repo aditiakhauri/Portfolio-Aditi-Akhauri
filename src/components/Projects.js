@@ -138,7 +138,7 @@ const Projects = () => {
                       "&:hover": {
                         color: "#FFD700",
                       },
-                      textDecoration: "none", // Remove underline
+                      textDecoration: "none", 
                     }}
                   >
                     <ArrowOutwardIcon />
